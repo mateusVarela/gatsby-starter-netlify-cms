@@ -1,19 +1,21 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: Esse sou eu, 
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### Mateus Varela
+Sou um jovem desenvolvedor brasileiro, gosto de jogar bola, conversar sobre futebol, jogar com meus amigos e aprender coisas novas, seja de programação ou até mesmo sobre o universo
+(que me deixa muito fascinado).
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### Um pouco da minha história
+Meu primeiro contato com programação foi vendo alguns videos de desenvolvimento de jogos e aquilo me despertou uma vontade enorme de aprender, tive a sensação de ter um universo
+para desbravar e que as possibilidades eram infinitas e de fato existe um grande poder nisso. Minha carreira como desenvolvedor começou no final de 2020 onde fiz alguns cursos e
+consegui uma vaga em uma empresa muito massa que me fez evoluir bastante, hoje sinto que as possibilidades com programação são maiores ainda.  
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### O motivo desse blog existir
+O principal motivo desse blog existir é ajudar as pessoas com problemas que eu enfrento diariamente trabalhando com desenvolvimento, quem é desenvolvedor ou está estudando programação sabe como as pesquisas são importantes para resolver nossos problemas, então acho interessante reunir vários desses problemas em um só lugar para ficar mais simples de
+encontrar as soluções. E é claro, tenho certeza que vou aprender muito fazendo isso, esse é o principal motivo. 
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+### Meus objetivos 
+Um dos meus principais objetivos com isso tudo é ajudar meus colegas de trabalho, pessoas que estão estudando programação e qualquer outro desenvolvedor aleatório que caiu em um problema que existe uma solução aqui. Acredito que ensinando é um dos jeitos mais efetivos de aprender.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
