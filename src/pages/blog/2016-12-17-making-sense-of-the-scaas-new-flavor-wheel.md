@@ -1,34 +1,76 @@
 ---
 templateKey: blog-post
 title: Como remover espaços em branco de uma String
-date: 2022-01-17T20:53:05.196Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by
-  coffee tasters, has been revised for the first time this year.
+date: 2022-01-23T12:32:35.034Z
+description: Existem algumas maneiras e cenários em que isso pode ser aplicado,
+  por exemplo na validações de campos de senha, nome, email ou alguma outra
+  coisa.
 featuredpost: false
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/imagem-post-remover-espaço-em-branco.png
 tags:
-  - flavor
-  - tasting
+  - JavaScript
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+Vou deixar no final desse post a função pronta para quem deseja usar ela, recomendo ler o post todo para entender como as coisas foram feitas para chegar nesse resultado.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+Se a validação tiver que ser feita enquanto o usuário digita podemos utilizar do evento **keyup** direto no input.
 
-## What the updates mean to you
+## Removendo espaço em branco ao digitar:
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+Primeiramente temos que criar um input e adicionar o evento **keyup** nele. Se a validação for feita quando o usuário sai do campo é só substituir o evento **keyup** por um evento **blur.**
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+![<span id="error-message" style="color: red;"></span> <input id='my-input' onkeyup="verifyCharacter(this.value)">](/img/carbon-2-.png "Input")
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+Eu aproveitei e já criei um **span** para apresentar a mensagem de erro.
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
+Agora que já temos um campo de entrada para nosso texto, podemos fazer uma função para receber tudo que é digitado no input, dessa forma a cada caractere digitado podemos verificar se é um espaço em branco ou não.
 
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+![](/img/cria-função-valida-caracteres.png "Função que valida espaço em branco.")
+
+Essa função deve receber o valor do input como parâmetro.
+
+Agora que já recebemos o valor do input podemos verificar se existe espaço em branco.
+
+![](/img/valida-espaço-em-branco.png "Verifica se tem espaço em branco.")
+
+Com essa validação a constante **hasWhiteSpace** vai receber um valor quando existir espaço vazio dentro do input e quando não existir nenhum espaço em branco, ela não recebe nada. Agora podemos remover esse espaço em branco e fazer as tratativas.
+
+![](/img/remove-espaço-em-branco.png "Remove espaço em branco e faz tratativas.")
+
+Pronto, dessa forma sempre que o usuário digitar um espaço em branco a função ***.trim()*** remove e apresenta uma mensagem de aviso para o usuário.
+
+Resultado:
+
+```javascript
+/**
+* Função responsável por verificar caracteres.
+**/
+const verifyCharacter = (inputValue) => {
+  
+  /**
+  * Verifica se a senha atual tem espaço em branco.
+  */
+  const hasWhiteSpace = inputValue.indexOf(' ') >= 0;
+
+  if (hasWhiteSpace) {
+    document.querySelector("#error-message").innerHTML = "Senha não pode conter espaço em branco."
+    
+    /**
+    * Pega o input correto.
+    **/
+    const input = document.querySelector("#my-input");
+    
+    /**
+    * Remove o espaço em branco.
+    **/
+    input.value = inputValue.trim()
+    return
+  }
+
+  /**
+  * Remove mensagem de erro.
+  **/
+  document.querySelector("#error-message").innerHTML = ""
+}
+```
