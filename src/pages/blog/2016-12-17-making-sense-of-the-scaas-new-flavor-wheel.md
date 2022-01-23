@@ -10,7 +10,7 @@ featuredimage: /img/imagem-post-remover-espaço-em-branco.png
 tags:
   - JavaScript
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![Imagem do post](/img/imagem-post-remover-espaço-em-branco.png)
 
 Vou deixar no final desse post a função pronta para quem deseja usar ela, recomendo ler o post todo para entender como as coisas foram feitas para chegar nesse resultado.
 
