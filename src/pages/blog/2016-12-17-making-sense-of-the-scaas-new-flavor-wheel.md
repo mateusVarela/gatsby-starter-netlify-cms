@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Como remover espaços em branco de uma String
-date: 2022-01-23T12:32:35.034Z
+date: 2022-01-23T12:42:26.675Z
 description: Existem algumas maneiras e cenários em que isso pode ser aplicado,
   por exemplo na validações de campos de senha, nome, email ou alguma outra
   coisa.
@@ -47,12 +47,12 @@ Resultado:
 * Função responsável por verificar caracteres.
 **/
 const verifyCharacter = (inputValue) => {
-  
+    
   /**
   * Verifica se a senha atual tem espaço em branco.
   */
   const hasWhiteSpace = inputValue.indexOf(' ') >= 0;
-
+    
   if (hasWhiteSpace) {
     document.querySelector("#error-message").innerHTML = "Senha não pode conter espaço em branco."
     
@@ -67,7 +67,7 @@ const verifyCharacter = (inputValue) => {
     input.value = inputValue.trim()
     return
   }
-
+    
   /**
   * Remove mensagem de erro.
   **/
