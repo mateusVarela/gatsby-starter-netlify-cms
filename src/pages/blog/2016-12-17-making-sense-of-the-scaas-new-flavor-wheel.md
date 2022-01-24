@@ -12,11 +12,9 @@ tags:
 ---
 ![](/img/imagem-post-remover-espaço-em-branco.png)
 
-Vou deixar no final desse post a função pronta para quem deseja usar ela, recomendo ler o post todo para entender como as coisas foram feitas para chegar nesse resultado.
+> Vou deixar no final desse post a função pronta para quem deseja usar ela, recomendo ler o post todo para entender como as coisas foram feitas para chegar nesse resultado.
 
-Se a validação tiver que ser feita enquanto o usuário digita podemos utilizar do evento **keyup** direto no input.
-
-## Removendo espaço em branco ao digitar:
+## Removendo espaço em branco ao digitar
 
 Primeiramente temos que criar um input e adicionar o evento **keyup** nele. Se a validação for feita quando o usuário sai do campo é só substituir o evento **keyup** por um evento **blur.**
 
